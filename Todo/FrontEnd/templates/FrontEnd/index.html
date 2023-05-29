@@ -94,7 +94,11 @@
                 </form>
             </div>
             <div id="form-list">
-                
+                {% for task in tasks %} 
+                <div>
+                    <h3>{{task.taskTitle}}</h3>
+                </div>
+                {% endfor %}
             </div>
         </div>
         
@@ -124,7 +128,7 @@
                         <div style="flex:1" class = "edit">
                             <button>Edit</button> 
                         </div>
-                        <div style="flex:1;m-2" class = "delete">
+                        <div style="flex:1;" class = "delete">
                             <button>-</button>
                         </div>
                     </div>

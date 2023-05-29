@@ -29,7 +29,7 @@ def detailTask(request,pk):
 def listTasks(request):
     tasks = Task.objects.all()[::-1]
     serializer = TaskSerializer(tasks, many = True)
-
+    print(tasks)
     return Response(serializer.data)
 @api_view(['POST'])
 def createTask(request):
